@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+
+    <title>Average Sea Level</title>
+  </head>
+  <body>
+    <div class="page-container">
+      <h2 class="title">Global Average Absolute Sea Level Change, 1880-2013</h2>
+      <div class="button-container">
+        <button onclick="changeDataToMonthly();" class="monthly-btn btn">
+          Monthly Data
+        </button>
+        <button onclick="changeDataToYearly();" class="yearly-btn btn">
+          Yearly Data
+        </button>
+        <!-- prettier-ignore -->
+        <div id="btn3" class="yearlysep">
+          Enter a Year between 1880 - 2013:
+          <input type="text" id="inputYear" name="InputYear" />
+          <button onclick="changeDataToYearlySeperated();" class="fa fa-search search" ></button>
+       
+        </div>
+      </div>
+      <div class="graph-container">
+        <canvas id="canvas"></canvas>
+      </div>
+
+      <div class="ocean">
+        <div class="wave"></div>
+        <div class="wave"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
